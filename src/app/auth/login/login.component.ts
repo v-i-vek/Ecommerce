@@ -15,6 +15,8 @@ export class LoginComponent {
   isLogIn = true;
   logSignBTN = "Login"
 
+  constructor(){ 
+  }
 
   isSignIn(){
     if(this.logSignBTN == 'Login'){
