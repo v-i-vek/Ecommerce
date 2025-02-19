@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     
     </button>
@@ -11,11 +11,36 @@
     <button mat-icon-button class="example-icon" >
         <mat-icon>add_shopping_cart</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" (click)="navigate('auth')" >
+    <button mat-icon-button class="example-icon"  >
         <mat-icon>account_circle</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" >
         <mat-icon>search</mat-icon>
     </button>
   </mat-toolbar>
+
+  <mat-sidenav-container autosize>
+    <mat-sidenav #drawer [opened]="true" mode="side">
+
+
+      <mat-nav-list>
+        <a mat-list-item>
+          <span class="entry">
+            <mat-icon>house</mat-icon>
+            <span>Home</span>
+          </span>
+        </a>
+      </mat-nav-list>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <h2>Content</h2>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+  
+
   
