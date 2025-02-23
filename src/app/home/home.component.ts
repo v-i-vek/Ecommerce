@@ -10,4 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class HomeComponent {
 
+  addToCart(){
+    console.log('Item added to cart')
+  }
 }

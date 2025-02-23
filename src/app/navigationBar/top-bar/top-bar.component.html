@@ -1,8 +1,9 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+<div style="margin-bottom: 75px; margin-top: 20px; background-color: yellow;">
+<mat-toolbar >
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     
-    </button>
+    </button> -->
     <span>My App</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" >
@@ -18,10 +19,14 @@
     <button mat-icon-button class="example-icon" >
         <mat-icon>search</mat-icon>
     </button>
+    <button mat-icon-button class="example-icon" routerLink="/home" >
+      <mat-icon>home</mat-icon>
+  </button>
   </mat-toolbar>
-
+<!-- 
   <mat-sidenav-container autosize>
     <mat-sidenav #drawer [opened]="true" mode="side">
+
       <mat-nav-list>
         <a mat-list-item routerLink="/home">
           <span class="entry">
@@ -31,13 +36,14 @@
         </a>
       </mat-nav-list>
 
-
     </mat-sidenav>
+
     <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
-  </mat-sidenav-container>
+  </mat-sidenav-container> -->
 
+</div>
  <router-outlet></router-outlet>
 
 
