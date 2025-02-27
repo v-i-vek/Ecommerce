@@ -1,11 +1,13 @@
-import { Sequelize } from 'sequelize'
+import { Sequelize } from 'sequelize';
 
-// connection with Database
-const sequelize = new Sequelize('postgres', 'postgres', 'root', {
+// Connection with Database
+export const sequelize = new Sequelize('postgres', 'postgres', 'root', {
     host: 'localhost',
     dialect: 'postgres', 
     logging: false,  // Disable logging (optional)
 });
+
+sequelize.sync({ alter: true, match: /postgres$/ });
 
 export async function testConnection() {
     try {
@@ -15,5 +17,3 @@ export async function testConnection() {
         console.error('❌ Unable to connect to the database:', error);
     }
 }
-
-
